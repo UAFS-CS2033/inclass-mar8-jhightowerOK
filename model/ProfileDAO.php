@@ -13,12 +13,16 @@
         }
 
         public function addProfile($profile){
+            $result=0;
             $connection=$this->getConnection();
             $stmt = $connection->prepare("INSERT INTO profiles (firstName, lastName, username, passwd) VALUES (?, ?, ?, ?);");
             $stmt->bind_param("ssss", $profile->getFirstName(),$profile->getLastName(),$profile->getUsername(),$profile->getPasswd());
-            $stmt->execute();
+            if($stmt->execute()){
+                $result=1;
+            }
             $stmt->close();
             $connection->close();
+            return $result;
         }
     }
 ?>
