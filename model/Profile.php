@@ -6,14 +6,14 @@ class Profile{
     private $lastName;
     private $username;
     private $passwd;
-
+/*
     public function __construct($firstName, $lastName, $username, $passwd){
-        this->setFirstName($firstName);
-        this->setLastName($lastName);
-        this->setUsername($username);
-        this->setPasswd($passwd);
+        $this->setFirstName($firstName);
+        $this->setLastName($lastName);
+        $this->setUsername($username);
+        $this->setPasswd($passwd);
     }
-
+*/
     public function setProfileID($profileID){
         $this->profileID = $profileID;
     }

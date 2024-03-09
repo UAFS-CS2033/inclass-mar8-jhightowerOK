@@ -1,17 +1,33 @@
 <?php
     require_once 'model/ProfileDAO.php';
 
-    showErrors(1);
+    showErrors(0);
 
     $profileDAO = new ProfileDAO();
     $method=$_SERVER['REQUEST_METHOD'];
     if($method=='POST'){
+      /**********************************************
+        * 1. Controller - Get HTTP Name-Value Pairs *
+        *********************************************/
       $firstName = $_POST['firstName'];
       $lastName = $_POST['lastName'];
       $username = $_POST['username'];
 	    $passwd = $_POST['passwd'];
-	    $profile = new Profile($firstName,$lastName,$username,$passwd);
+      /*********************************************************************************
+       * 2. Controller - Package Name-Value Pairs in Data Transfer Object-DTO(Profile)
+       *********************************************************************************/
+	    $profile = new Profile();
+      $profile->setLastName($lastName);
+      $profile->setFirstName($firstName);
+      $profile->setUsername($username);
+      $profile->setPasswd($passwd);
+      /***************************************************************************************** 
+       * 3. Controller - Interact with Data Access Object-DAO by Calling function and passing DTO
+       ******************************************************************************************/
       $profileDAO->addProfile($profile);
+      /*************************************
+       * 4. Controller - Select Next View
+       *************************************/
       header('Location: addProfile.php');
       exit;        
     }
@@ -20,7 +36,7 @@
         if($debug==1){
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
+            error_reporting(E_ALL & !E_NOTICE);
         }
     }
 ?>
