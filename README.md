@@ -1,9 +1,11 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/_YDyiRBE)
 ## March 8 Exercise: Profile - Add Form and ProfileDAO
 
-![diagram](inClassMar8.png)
+![diagram](images/inClassMar8.png)
 
 Create a form to add a profile to the MySQL profiles table in the **mar8DB** database.  Complete the **HTML form page**(*addProfile.php*), **Data Transfer Object**(*Profile.php*), and **Data Access Object**(*ProfileDAO.php*). Verify your add form is working by *checking the profiles table in the MySQL client*. Style your HTML using BootStrap.
+
+![window](images/addProfile1.png)
 
 ### Setup Database ###
 ```
@@ -29,5 +31,5 @@ function showErrors($debug){
 
 #### HTTP Requests Session
 
-![session](addProfileSession.png)
+![session](images/addProfileSession.png)
 
