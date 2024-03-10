@@ -26,3 +26,8 @@ function showErrors($debug){
    }
 }
 ```
+
+#### HTTP Requests Session
+
+![session](addProfileSession.php)
+
