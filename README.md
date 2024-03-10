@@ -29,5 +29,5 @@ function showErrors($debug){
 
 #### HTTP Requests Session
 
-![session](addProfileSession.php)
+![session](addProfileSession.png)
 
