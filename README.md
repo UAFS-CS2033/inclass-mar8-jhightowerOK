@@ -5,8 +5,6 @@
 
 Create a form to add a profile to the MySQL profiles table in the **mar8DB** database.  Complete the **HTML form page**(*addProfile.php*), **Data Transfer Object**(*Profile.php*), and **Data Access Object**(*ProfileDAO.php*). Verify your add form is working by *checking the profiles table in the MySQL client*. Style your HTML using BootStrap.
 
-![window](images/addProfile1.png)
-
 ### Setup Database ###
 ```
 sudo mysql < profile.sql
